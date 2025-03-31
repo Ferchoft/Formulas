@@ -2,20 +2,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     const searchInput = document.getElementById('search-input');
-    const searchButton = document.getElementById('search-button');
+    const searchIcon = document.getElementById('search-icon'); // Obtén el elemento del icono
     const formulaSections = document.getElementById('secciones-principales');
     const formulaBoxes = formulaSections.querySelectorAll('.box');
     let slideIndex = 0;
     const slides = document.querySelectorAll('.slide');
 
-    // Establecer el modo claro como predeterminado
-    body.classList.add('light-mode');
-
     themeToggle.addEventListener('click', function() {
         body.classList.toggle('light-mode');
     });
 
-    searchButton.addEventListener('click', function() {
+    // Evento para el clic en el icono de búsqueda
+    searchIcon.addEventListener('click', function() {
         const searchTerm = searchInput.value.trim().toLowerCase();
 
         if (searchTerm) {
@@ -40,9 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     searchInput.addEventListener('keypress', function(event) {
         if (event.key === 'Enter') {
-            searchButton.click();
+            searchIcon.click(); // Simula un clic en el icono al presionar Enter
         }
     });
+
     // Función para mostrar la siguiente imagen del slider
     function showSlides() {
         for (let i = 0; i < slides.length; i++) {

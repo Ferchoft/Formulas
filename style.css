@@ -500,9 +500,3 @@ body.light-mode .whatsapp-button:hover {
         right: 5px; /* Ajustar la posición del icono en pantallas aún más pequeñas */
     }
 }
-
-    #search-input {
-        font-size: 14px;
-        padding: 8px;
-    }
-}
